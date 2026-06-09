@@ -61,12 +61,13 @@
 ```
 
 ## Calcoli indirizzi IP
+Schema vuoto:
 ```
 ip:         
 ip binario: 
 maschera:    => 
 
-network:        => 
+network:     => 
 broadcast:   => 
 
 gateway1:    => 
@@ -75,15 +76,15 @@ gateway2:    =>
 numero massimo host o sottoreti:
 2^(32 - cidr) - 2 = 
 
-network: xxx ottetti
-host: xxx ottetti
+ottetti network: cidr / 8
+ottetti host:    (32 - cidr) / 8
 ```
 ```
 ip:         192.168.25.30/25
 ip binario: 11000000.10101000.00011001.0 0011110
 maschera:   11111111.11111111.11111111.1 0000000 => 255.255.255.128
 
-network:       11000000.10101000.00011001.0 0000000 => 192.168.25.0
+network:    11000000.10101000.00011001.0 0000000 => 192.168.25.0
 broadcast:  11000000.10101000.00011001.0 1111111 => 192.168.25.127
 
 gateway1:   11000000.10101000.00011001.0 0000001 => 192.168.25.1
@@ -92,7 +93,6 @@ gateway2:   11000000.10101000.00011001.0 1111110 => 192.168.25.126
 numero massimo host o sottoreti:
 2^(32 - cidr) - 2 = 2^(32 - 25) - 2 = 2^7 - 2 = 128 - 2 = 126
 
-network: 3.125 ottetti
-host: 0.875 ottetti
+ottetti network: 3.125
+ottetti host:    0.875
 ```
-
